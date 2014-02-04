@@ -1,5 +1,3 @@
-// Jai Shree Ram
-#ifdef TPC2
 #include<iostream>
 #include<string>
 #include<string.h>
@@ -53,4 +51,3 @@ int main()
 	Print(rotatedString);
 	return 0;
 }
-#endif
