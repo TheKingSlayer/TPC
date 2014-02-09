@@ -100,7 +100,7 @@ int main()
 		}
 	}
 	StableMarriage(arr,N);
-	printf("Final Marriages:\GIRL\tBOY\n");
+	printf("Final Marriages:\tGIRL\tBOY\n");
 
 	for(i=0;i<N;i++)
 	{
