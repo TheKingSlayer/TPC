@@ -1,18 +1,16 @@
+#ifdef STABLE_MARRIAGE_TPC
 #include<stdio.h>
 
 int N;
-int**	arr=NULL;
-// index of men is the index of the man; and the value is his wife
-int*	men = NULL;
-// index of women is the index of the woman; and the value is her husband
-int*	women = NULL;
+int	arr[1001][1001];
+int	men[1001];
+int	women[1001];
 
-void StableMarriage(int** arr,int N)
+int mStack[1001];
+
+void StableMarriage(int N)
 {
 	int i,j,topstack,currMan,prefMan,prefWoman,currHusband,guyGotMarried=0;
-
-	int* mStack = NULL;
-	mStack = new int[N];
 
 	for(i=0;i<N;i++)
 		mStack[i]=i;
@@ -81,10 +79,6 @@ int main()
 	int i,j;
 	scanf("%d",&N);
 
-	arr = new int*[N*2];
-	men = new int[N];
-	women = new int[N];
-
 	for(i=0;i<N;i++)
 	{
 		men[i] = -1;
@@ -92,20 +86,15 @@ int main()
 	}
 
 	for(i=0;i<N*2;i++)
-	{
-		arr[i] = new int[N];
 		for(j=0;j<N;j++)
-		{
 			scanf("%d",&arr[i][j]);
-		}
-	}
-	StableMarriage(arr,N);
-	printf("Final Marriages:\GIRL\tBOY\n");
 
+	StableMarriage(N);
+	printf("GIRL\tBOY\n");
 	for(i=0;i<N;i++)
 	{
 		printf("%d\t%d\n",i+N,women[i]);
 	}
-
 	return 0;
 }
+#endif
