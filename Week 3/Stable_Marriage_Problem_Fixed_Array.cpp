@@ -1,3 +1,4 @@
+#define STABLE_MARRIAGE_TPC
 #ifdef STABLE_MARRIAGE_TPC
 #include<stdio.h>
 
