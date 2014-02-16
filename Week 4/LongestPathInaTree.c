@@ -1,4 +1,3 @@
-// Jai Shree Ram
 #include<stdio.h>
 
 int Arr[10002][7];
