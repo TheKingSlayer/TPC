@@ -33,7 +33,6 @@ int FillLeftandRightpathLen()
 		if(Arr[i][6]>maximum) maximum = Arr[i][6];
 	}
 	return maximum;
-	// first look for parent node( a node with parent([2]) as 0). start from there and keep filling the max([6]) of its children
 }
 
 int MaxPathLengthofNode(int node)
