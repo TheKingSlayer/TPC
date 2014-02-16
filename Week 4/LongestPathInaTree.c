@@ -4,7 +4,7 @@ int Arr[10002][7];
 
 // [0] is left of n node
 // [1] is right of n node
-// [2] is parent of n node
+// [2] is parent of n node (not being used)
 // [3] is the length of left path
 // [4] is the length of right path 
 // [5] is the max length(out of left/right)
@@ -23,10 +23,8 @@ int MaxPathLengthofNode(int node);
 
 int FillLeftandRightpathLen()
 {
-	int i=1;
-	int maxat;
-	int rootNode;
-	int maximum=0;
+	int i		= 1;
+	int maximum	= 0;
 	for(i=1;i<=n;i++)
 	{
 		MaxPathLengthofNode(i);
